@@ -10,7 +10,7 @@ body{
     margin-top:1%;
 }
 #shopping{
-    height: 170px;
+    height: auto;
     width: 650px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: white;
@@ -280,4 +280,28 @@ text-decoration: none;
 .Box3:hover{
 text-decoration: underline;
 cursor: pointer;
+}
+.button{
+    background-color: #fff;
+    border: 0px;
+    color: rgb(144, 142, 142);
+    font-weight: bold;
+    margin-left: 30%;
+}
+.Des{
+    margin-top:-32%;
+    margin-left:10%;
+    text-decoration: none;
+   
+}
+#main{
+ height:auto;
+}
+.Prod{
+    height: 220px;
+}
+
+.DesCommon{
+ text-decoration: none;
+ margin-left:-119px;
 }
