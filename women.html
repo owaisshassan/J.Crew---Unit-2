@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Oleo+Script+Swash+Caps&family=Radio+Canada:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+       #all{
+           width: 90%;
+           height: auto;
+           margin: auto;
+           font-family: 'Macondo', cursive;
+           font-family: 'Oleo Script Swash Caps', cursive;
+           font-family: 'Radio Canada', sans-serif;
+           /* border: 1px solid red; */
+       }
+       #top{
+            width: 25%;
+            height: auto;
+            margin: auto;
+            /* border: 1px solid red; */
+            margin-top: 90px;
+        }
+        h4,h1{
+            text-align: center;
+            font-family: 'Akshar', sans-serif;
+        }
+        h4+div{
+            display: flex;
+            justify-content: space-between;
+        }
+        h4 + div button{
+            width: 50px;
+            padding: 5px;
+        }
+        h4 + div button:hover{
+            cursor: pointer;
+            border: 1px solid black;
+        }
+        #top + div{
+            position: sticky;
+            top: 0px;
+            background-color: white;
+            height: auto;
+        }
+        #color,#filt,#feat{
+            padding: 5px;
+            /* margin-left: 20px; */
+            margin-top: 20px;
+           
+        }
+        #main{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(500px, auto);
+            margin-top: 50px;
+            gap:30px 20px;
+        }
+        #main > div{
+            /* border: 1px solid red; */
+            height: 600px;
+            border-radius: 0.5rem;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+        #main > div > img{
+            width: 100%;
+            height: 70%;
+            border-top-left-radius: 0.5rem ;
+            border-top-right-radius: 0.5rem ;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+        #main > div > h3{
+            margin-top: -5px;
+            /* color: red; */
+        }
+        #main > div > h3 + p{
+            margin-top: -15px;
+        }
+        #main > div > p + p{
+            margin-top: -5px;
+            font-size: 20px;
+        }
+        #main > div > h2{
+            color: rgb(241, 177, 188);
+            margin-top: -15px;
+            font-size: 14px;
+            /* border: 1px solid red; */
+        }
+        #main > div > h2+p{
+            margin-top: -5px;
+        }
+        #main > div > p + button{
+            /* background-color: teal; */
+            font-family: 'Macondo', cursive;
+            font-family: 'Oleo Script Swash Caps', cursive;
+            font-family: 'Radio Canada', sans-serif;
+            padding: 5px;
+        }
+        #main > div > p + button:hover{
+            cursor: pointer;
+        }
+
+        @media all and (min-width:451px) and (max-width:750px){
+            #main{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(500px, auto);
+            margin-top: 50px;
+            gap:30px 20px;
+            }
+        }
+        @media all and (min-width:200px) and (max-width:450px){
+            #main{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(500px, auto);
+            margin-top: 50px;
+            gap:30px 20px;
+            }
+         #all{
+            width: 100%;
+            height: auto;
+            margin: auto;
+         }
+
+        
+    </style>
+</head>
+<body>
+    <div id="all">
+        <div id="top">
+            <h1>SHOP ALL WOMEN'S CLOTHING</h1>
+            <h4>Shop by Sizes & Fits</h4>
+            <div>
+                <button>XS</button><button>S</button><button>M</button><button>L</button><button>XL</button><button>XXL</button>
+            </div>
+        </div>
+        <div>
+            <select  id="feat" onchange="handleFeatureSort()">
+                <option value="none">Featured</option>
+                <option value="LTH">Price:Low - High</option>
+                <option value="HTL">Price:High - Low</option>
+            </select>
+            <select name="" id="filt" onchange="typeSort()">
+                <option value="none">Filter</option>
+                <option value="tshirts">T-Shirt Dresses</option>
+                <option value="">Crop Tops</option>
+                <option value="">Dungarees</option>
+                <option value="">Slim Fit Jeans</option>
+                <option value="">Traditional</option>
+                <option value="">Accessories</option>
+            </select>
+            <select name="" id="color">
+                <option value="">Colors</option>
+                <option value="">Black</option>
+                <option value="">Blue</option>
+                <option value="">white</option>
+            </select>
+        </div>
+        <div id="main"></div>
+    </div>
+</body>
+</html>
+<script>
+    var data = [
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/AK283_YL5736_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "T-Shirt",
+            type:"Garment-dyed slub cotton crewneck T-shirt",
+            price: "₹900",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/AV253_NA6445_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "T-Shirt",
+            type:"Garment-dyed slub cotton crewneck T-shirt",
+            price: "₹600",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/AW586_BR6398_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "T-Shirt",
+            type:"Garment-dyed slub cotton crewneck T-shirt",
+            price: "₹700",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/AW770_YL5517_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "T-Shirt",
+            type:"Garment-dyed slub cotton crewneck T-shirt",
+            price: "₹300",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/AX752_BK0001_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "T-Shirt",
+            type:"Garment-dyed slub cotton crewneck T-shirt",
+            price: "₹2000",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/AY080_PR6127_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "T-Shirt",
+            type:"Garment-dyed slub cotton crewneck T-shirt",
+            price: "₹1400",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/AY671_BL8227_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "new color",
+            type:"Garment-dyed slub cotton crewneck new color",
+            price: "₹2100",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/BF345_BL6305_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "new color",
+            type:"Garment-dyed slub cotton crewneck new color",
+            price: "₹2400",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/BF354_OR5362_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "new color",
+            type:"Garment-dyed slub cotton crewneck new color",
+            price: "₹2300",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/BF355_PK6756_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "new color",
+            type:"Garment-dyed slub cotton crewneck new color",
+            price: "₹2000",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/BF356_BR6712_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "new color",
+            type:"Garment-dyed slub cotton crewneck new color",
+            price: "₹2999",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/BF357_RD5924_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "new color",
+            type:"Garment-dyed slub cotton crewneck new color",
+            price: "₹2600",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/BF358_PK6756_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "new color",
+            type:"Garment-dyed slub cotton crewneck new color",
+            price: "₹700",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/BF360_PR6127_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "new color",
+            type:"Garment-dyed slub cotton crewneck new color",
+            price:  "₹4000",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/BF366_BR6712_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "new color",
+            type:"Garment-dyed slub cotton crewneck new color",
+            price: "₹3500",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/BF368_OR5678_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "new color",
+            type:"Garment-dyed slub cotton crewneck new color",
+            price: "₹5000",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/BG252_OR6122_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "new color",
+            type:"Garment-dyed slub cotton crewneck new color",
+            price: "₹2500",
+            discount:"2 FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        {
+            avatar : "https://www.jcrew.com/s7-img-facade/BF390_GR6909_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=280&hei=280",
+            first: "new color",
+            type:"Garment-dyed slub cotton crewneck new color",
+            price: "₹3000",
+            discount:"2FOR 30% OFF, 3+ FOR 40% OFF",
+            size:"Classic, Slim, Tall"
+        },
+        
+        
+    ];
+     
+    // localStorage.setItem("data",JSON.stringify(data));
+    // var data1 = JSON.parse(localStorage.getItem("data")) || [];
+
+
+    
+   display1(data);
+    function handleFeatureSort()
+    {
+        var select = document.getElementById("feat").value;
+        console.log(select);
+        // if(select == "none")
+        // {
+        //     display1(data);
+        // }
+        if(select == "LTH")
+        {
+            data.sort(function (a,b) {
+                return a.price - b.price;
+            })
+         console.log(data);
+           display1(data);
+           
+        }
+        if(select == "HTL")
+        {
+            data.sort(function(a,b){
+                return b.price - a.price;
+            })
+          console.log(data);
+            display1(data);
+        }
+    }
+    function typeSort()
+    {
+        var select = document.getElementById("filt").value;
+        console.log(select);
+        if(select == "tshirts")
+        {
+            var result = data.map(function(el){
+                return el.first == "T-Shirt";
+            })
+            console.log(result);
+            display1(result);
+        }
+        // if(select == "HTL")
+        // {
+        //     data.sort(function(a,b){
+        //         return b.price - a.price;
+        //     })
+        //    //console.log(data);
+        //     display1(data);
+        // }
+    }
+    function display1(arr)
+    {
+        arr.map(function(el){
+        var div = document.createElement("div");
+        var img = document.createElement("img");
+        img.setAttribute("src",el.avatar);
+        var h3 = document.createElement("h3");
+        h3.innerText = el.first;
+        var p1 = document.createElement("p");
+        p1.innerText = el.type;
+        var p2 = document.createElement("p");
+        p2.innerText = el.price;
+        var b = document.createElement("h2");
+        b.innerText = el.discount;
+        var p3 = document.createElement("P");
+        p3.innerText = el.size;
+        var button = document.createElement("button");
+        button.innerText = "Add To Bag";
+        button.setAttribute("class","bag");
+        button.addEventListener("click",function(){
+            addBag(el);
+        })
+        div.append(img,h3,p1,p2,b,p3,button);
+        document.querySelector("#main").append(div);
+        });
+    };
+    var bagArr = JSON.parse(localStorage.getItem("bag")) || [];
+    function addBag(el)
+    {
+        bagArr.push(el);
+        localStorage.setItem("bag",JSON.stringify(bagArr));
+        console.log(bagArr);
+        window.location.href="BagPage.html";
+
+    }
+
+        
+</script>
