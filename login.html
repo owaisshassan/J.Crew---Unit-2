@@ -124,13 +124,15 @@
     if (userData === null) {
       alert("Create an account");
     } else if (
-      userData.email == data.email &&
-      userData.password == data.password
+      userData.email === data.email &&
+      userData.password === data.pass
     ) {
       alert("Sign In Successful");
+      window.location.href = "home.html";
     } else if (userData.email != data.email || userData.email != data.email) {
       alert("Wrong Information");
+      window.location.href = "signup.html";
     }
-    window.location.href = "home.html";
+    
   }
 </script>
