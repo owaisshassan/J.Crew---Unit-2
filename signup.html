@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 35%;
+            margin: auto;
+            height: 50px;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: transparent;
+        }
+        #container{
+            background-color: white;
+        }
+        form>div{
+            font-size: 22px;
+            margin: auto;
+            text-align: center;
+        }
+        body > div:nth-child(2){
+            width: 40%;
+            height: 500px;
+            /* border: 1px solid red; */
+            margin: auto;
+            margin-top: 50px;
+        }
+        input,select{
+            width: 90%;
+            height: 30px;
+            margin-top: 30px;
+        }
+        p{
+            margin-bottom: 0px;
+            margin-top: 20px;
+        }
+        #submit{
+            margin-top: 50px;
+            background-color: black;
+            color: white;
+        }
+        #rem{
+            display:flex;
+        }
+        #rem>input{
+            height:15px;width:15px;
+        }
+        #rem>lable{
+            height:20px;width:auto; margin-top:30px;
+            font-size: 15px;
+        }
+        h3,h3+p{
+            display:inline-block;
+        }
+        a{
+            color:rgb(47, 124, 155);text-decoration: none;
+            font-size:18px; margin-left:15px;
+        }
+        form+p{
+            height:auto;
+            font-size:13px;
+            width:90%;
+            color:gray;
+            line-height: 1.15;
+            }
+        hr{
+            margin-top:30px;
+        }
+    </style>
+</head>
+<body>
+     <div id="container">
+        <form action="">
+           <div id="up"> <b>Sign Up</b></div>
+            <input id="email" type="email" placeholder="Email Address*">
+            <input id="password" type="password" placeholder="Create Password">
+            <select id="select">
+                <option value="">Country</option>
+                <option value="India">India</option>
+                <option value="US">US</option>
+                <option value="London">London</option>
+                <option value="Russia">Russia</option>
+            </select>
+            <div id="rem">
+                <input type="checkbox"/>
+             <lable>Remember me</lable>
+            </div>
+            
+            <input id="submit" type="submit" value="CREATE AN ACCOUNT">
+            <!-- <p>Already have an account?<a href="">Log In</a></p> -->
+        </form>
+        <p>
+            By clicking "Create an Account", you agree to our Terms 
+            of Use and Privacy Policy, including the Use of Cookies 
+            and the transfer of your personal information to the 
+            United States, a jurisdiction that may not provide an 
+            equivalent level of data protection to the laws in your
+            home country.
+        </p>
+        <hr>
+        <h3>Already have an account?</h3>
+        <p><a href="login.html">Sign In</a></p>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",myfunction);
+    function myfunction()
+    {
+        event.preventDefault();
+        var userData ={
+            email : document.querySelector("#email").value,
+            password : document.querySelector("#password").value
+        }
+        
+        localStorage.setItem("signupdetail",JSON.stringify(userData));
+        console.log(userData);
+        
+        alert("Create Account Successfully");
+        window.location.href = "home.html";
+    }
+    
+</script>
