@@ -1,0 +1,383 @@
+#nav{
+    display: flex;
+    height: auto;
+    /* height: 80px; */
+    width: 100%;
+    position:fixed;
+    margin: auto;
+    margin-top: -20px;
+    justify-content: space-evenly;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    
+}
+#logo{
+    font-size:30px ;
+    margin: auto;
+    margin-left: 50px;
+    margin-top: 25px;
+    font-weight: lighter;
+    font-family: 'Times New Roman', Times, serif;
+   
+    
+}
+#nav1{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(1,auto);
+    margin: auto;
+    margin-left: 40px;
+    gap: 30px;
+}
+#nav1>h4{
+    font-weight:500;
+    margin: auto;
+    margin-top: 25px;
+}
+#sale{
+    color: red;
+    font-weight:bolder;
+}
+#nav2{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(1,auto);
+    margin: auto;
+    margin-left: 250px;
+    gap: 0px;
+   
+}
+
+
+#search {
+   margin: auto;
+position: relative;
+padding: 0 0 2px 36px;
+border: 1px solid #ccc;
+width: 180px;
+height: 36px;
+background: #fff;
+font-size: 13px;
+line-height: 18px;
+}
+#fav{
+    margin-left: 2vw;
+}
+#cart{
+    border: 0px;
+    background-color: white;
+    font-size: x-large;
+    margin: auto;
+    margin-right: 7vw;
+    margin-bottom: 1.5vw;
+    overflow-x: hidden;
+}
+#sign-in{
+background-color: white;
+border: 0px;
+font-weight: bold;
+color: blue;
+}
+#help:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#container{
+margin: auto;
+
+border-top: 1px solid rgb(200, 184, 184);
+}
+
+#container>p{
+margin-top: 80px;
+text-align: center;
+}
+#frontpics{
+display: flex;
+margin: auto;
+margin-top: 30px;
+}
+#frontpics img{
+width: 100%;
+}
+#yourdress{
+    position: absolute;
+    color: #fff;
+    margin-top: -42%;
+    margin-left: 6%;
+    /* font-size: 58px; */
+    font-size: 4vw;
+    line-height: 0.9;
+    letter-spacing: 0.3px;
+    border-top: unset;
+    border-bottom: unset;
+    padding-bottom: unset;
+    padding: 0;
+    text-align: center;
+}
+#destination{
+    font-family: "freight-big-pro", "FreightBig Pro", Times, serif;
+    font-size: 6vw;
+    margin-top: -78%;
+    margin-left: 8%;
+    font-style: italic;
+    color: #fff;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+#desc{
+    color: #fff;
+    width: 250px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    margin-left: 18%;
+    margin-top: -10%;
+}
+#container2{
+width: 80%;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: repeat(3,auto);
+gap: 0px;
+margin: auto;
+margin-top: 50px;
+}
+#container2 img{
+width: 100%;
+}
+#creatives-box{
+margin: auto;
+margin-top: 6%;
+border: 1px solid #FBF9F5;
+background-color: #E7C9C1;
+}
+#creatives-box>div:nth-child(1)>img{
+margin: auto;
+margin-left: 39%;
+margin-top: 4%;
+width: 20%;
+height: 20%;
+}
+#creatives-box h4{
+margin: auto;
+margin-left: 42%;
+margin-top: 1%;
+}
+#creatives-box>div p{
+position: absolute;
+margin: auto;
+margin-top: -3%;
+margin-left: 13%;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-style: oblique;
+font-size: large;
+color: rgb(149, 91, 21);
+font-weight: bold;
+background-color: bisque;
+}
+#creatives{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(1,auto);
+gap: 15px;
+width: 75%;
+margin: auto;
+margin-top: 1%;
+}
+#creatives img{
+width: 100%;
+}
+#bonus{
+margin: auto;
+margin-left: 33%;
+margin-top: 4%;
+color: white;
+font-size: 50px;
+font-weight: 700;
+letter-spacing: 8px;
+margin-bottom: 20px;
+position: relative;
+animation: text 3s 2;
+}
+@keyframes text{
+0%{
+color: black;
+margin-bottom: -40px;
+}
+30%{
+letter-spacing: 25px;
+margin-bottom: -40px;
+}
+85%{
+letter-spacing: 8px;
+margin-bottom: -40px;
+}
+}
+#bonus-video{
+margin: auto;
+margin-top: 4%;
+margin-left: 28%;
+margin-bottom: 4%;
+}
+#home-end{
+border-top: 1px solid rgb(247, 244, 244);
+margin-top: 4%;
+
+}
+#contacts{
+    height: 50px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.img{
+    height: 25px;
+    width: 25px;
+    /* border: 1px solid black; */
+}
+.details{
+    height: 25px;
+    width: 125px;
+    /* border: 1px solid black; */
+    font-family:Soleil, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding-top: 10px;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    
+}
+.details:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.image{
+    width: 100%;
+}
+#Email{
+    font-family:Soleil, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+#Email:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+#about{
+background-color: #f0f1f2;
+display: flex;
+justify-content: space-between;
+justify-content: space-around;
+align-items: center;
+margin: auto;
+}
+#social{
+background-color: #f0f1f2;
+}
+
+ul {
+margin:0;
+margin-left: 6%;
+padding:0;
+display:flex;
+}
+
+ul li {
+list-style: none;
+
+}
+
+ul li a {
+
+width:60px;
+height:60px;
+display:block;
+text-align:center;
+margin:0 10px;
+border-radius: 50%;
+padding: 6px;
+box-sizing: border-box;
+text-decoration:none;
+box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+background: linear-gradient(0deg, #ddd, #fff);
+transition: .5s;
+}
+ul li a img{
+margin-top: 15%;
+width: 70%;
+}
+
+ul li a:hover {
+box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+text-decoration:none;
+}
+
+ul li a .fab {
+width: 100%;
+height:100%;
+display:block;
+background: linear-gradient(0deg, #fff, #ddd);
+border-radius: 50%;
+line-height: calc(60px - 12px);
+font-size:24px;
+color: #262626;
+transition: .5s;
+}
+
+ul li:nth-child(1) a:hover .fab {
+color: #3b5998;
+}
+
+ul li:nth-child(2) a:hover .fab {
+color: #00aced;
+}
+
+ul li:nth-child(3) a:hover .fab {
+color: #dd4b39;
+}
+
+ul li:nth-child(4) a:hover .fab {
+color: #007bb6;
+}
+
+ul li:nth-child(5) a:hover .fab {
+color: #e4405f;
+}
+
+#social>h4{
+margin:5% 0% 5% 6%;
+
+color: grey;
+
+}
+
+/* LINK CSS */
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: rgb(201, 71, 93);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
