@@ -305,3 +305,9 @@ cursor: pointer;
  text-decoration: none;
  margin-left:-119px;
 }
+
+.link{
+    text-decoration: none;
+    font-size: 13px;
+    color:black ;
+}
